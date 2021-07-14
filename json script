@@ -1,0 +1,30 @@
+json script
+
+1. allow all ec2 action
+	deny to launch ohter than t2.micro instances in mumbai region
+
+2.write a policy which will deny to stop/terminate prod environment
+3.deny to create volume in ap-south-1a	{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "deny",
+            "Action": "ec2:RunInstances",
+            "Resource": "*"
+            "Condition": [
+            {"StringNotEquals": {"ec2:InstanceType": "t2.micro"}},
+			{"StringNotEquals": {"ec2:Region": "ap-souht-1"}}
+        
+        				]
+        }
+
+
+    ]
+}
+---------------------
+inline policies

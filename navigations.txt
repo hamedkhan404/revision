@@ -1,0 +1,74 @@
+003342292036
+
+day 2 
+	EC2
+		creating instances(servers)
+
+			instance states
+				stop/start/terminate/reboot
+		
+		creating/ modifying volumes
+		creating/ modifying key pairs
+		creating/ modifying security group
+// note, almost all services are dependent to AZ(availability zones). 
+security group act as a firewall to server.
+we can also create key-pairs and security groups while creating new instances
+ day 3
+
+we can attach upto 5 security groups to an instance.
+we can change sg of instance anytime.
+we cannot change keypair of imstances
+
+snapshot is backup storage provided by aws, it include time of the backup, 
+snapshot is not dependent to az, it belongs to region
+
+
+practical..
+1. create instance redhat linux ami, t2.micro, root volume 10gb, raw volume 8 gb, attach sg and keypair.
+
+2.create snapshot of root volume, 
+create ami for instance
+
+day4
+ vpc== virtual private cloud
+
+ cidr responsible for 
+
+ day7
+
+april11
+
+
+
+ create private hosted zone.
+ upload ip address
+10.0.0.10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
